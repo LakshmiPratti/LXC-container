@@ -139,14 +139,15 @@ You can login from host to container using ssh:
 $ ssh user@10.0.3.255
 
 How do I stop a container?
-$ sudo lxc-stop -n {container-name-here}
+$ lxc-stop {container-name-here}
 
 How do I destroy (delete) a container?
-$ sudo lxc-destroy -n {container-name-here}
+$ lxc-destroy {container-name-here}
 
 How do I list all containers?
-$ sudo lxc-ls
-$ sudo lxc-ls --fancy
+$ lxc list -cns
+$ lxc-ls
+$ lxc-ls --fancy
 
 How do I update or patch my container?
 Use the lxc-attach command to update your container that is powered by Ubuntu or Debian:
@@ -169,7 +170,7 @@ $ sudo lxc config device override <container> root size=[VALUE]
 
 
 
-
+lxc list -cns
 
 
 
