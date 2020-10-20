@@ -142,7 +142,7 @@ How do I stop a container?
 $ lxc-stop {container-name-here}
 
 How do I destroy (delete) a container?
-$ lxc-destroy {container-name-here}
+$ lxc-delete {container-name-here}
 
 How do I list all containers?
 $ lxc list -cns
@@ -170,7 +170,6 @@ $ sudo lxc config device override <container> root size=[VALUE]
 
 
 
-lxc list -cns
 
 
 
