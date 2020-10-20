@@ -154,6 +154,18 @@ $ sudo lxc-attach -n <container-name> apt-get -- -qq update
 $ sudo lxc-attach -n <container-name> apt-get -- -qq upgrade
 $ sudo lxc-attach -n <container-name> yum -- -y update
 
+Setting CPU limit:
+$ sudo lxc config set <CONTAINER> limits.cpu [VALUE]
+
+Memory:
+To apply a straightforward memory limit run:
+
+$ sudo lxc config set <container> limits.memory [VALUE]
+
+To set a disk limit (requires btrfs or ZFS):
+
+$ sudo lxc config device override <container> root size=[VALUE]
+
 
 
 
