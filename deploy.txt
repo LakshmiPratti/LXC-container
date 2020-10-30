@@ -1,0 +1,35 @@
+->The lxd-demo-server is a daemon that offers a public REST API for use from a web browser.
+->Root shell using a LXD container with nesting enabled.
+->Recording all sessions in a sqlite3 database.
+->Network side of things, the demo server itself doesn’t do any kind of firewalling or similar network restrictions.
+->Containers handed to users should never be using “security.privileged” as that’d be a straight route to getting root privileges on  the host.
+
+
+Available as a snap package and interacts with the snap version of LXD.
+It makes sure that you dont have deb version of LXD installed.
+$sudo apt remove --purge lxd lxd-client
+
+
+To install the snap package and interacts with the snap version of LXD
+$sudo snap install lxd
+
+
+For configuration of lxd conatiners(eg CPU,Processes,Memory,Time limit for the session,Total number of concurrent sessions)
+$sudo lxd init
+
+
+For installing lxd-demo-server itself
+$sudo snap install lxd-demo-server
+$sudo snap connect lxd-demo-server:lxd lxd:lxd
+
+
+Your own instance of the demo server.
+The server is acccessible at
+http://127.0.0.1:8080 
+
+
+To change the configuration
+$sudo lxd-demo-server.configure
+
+
+
