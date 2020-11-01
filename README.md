@@ -7,7 +7,4 @@ Creating container as unprivileged user/root using template
 Limiting the RAM/CPU/Storage of our container
 Take snapshot of container
 Cloning container
-Installation of Docker
-Making the docker image of container
-Uploading the docker container image on the server
 Get the history of commands
