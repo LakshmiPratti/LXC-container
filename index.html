@@ -15,7 +15,7 @@
 
             function sendEmail() { 
                 var Email = document.getElementById("email").value;
-                var data=	document.getElementById("dat").value;
+                var data=	document.getElementById("dat").innerHTML;
                 console.log(Email)
               	console.log(data)
                  Email.send({ 
@@ -128,15 +128,14 @@
                     Reconnect
                 </button>
                 <br></br>
-                <div id="Email">
+               
                         <form method = "post">
                             <label for="myName">Email I'd:</label>
                             <input type="email" id="email" name="email">
                             <input type="button" value="Send Me!" onclick="sendEmail()"/>
+                            <p style="color:red"><small> *All the commands typed till now will be send </small></p>
                         </form>
-                        <p style="color:red"><small> *All the commands typed till now will be send </small></p>
-                    
-                </div>
+             
                     <div id="dat" style="display:none"></div>
 
             </div>
