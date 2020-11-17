@@ -31,7 +31,7 @@ sudo snap connect lxd-demo-server:lxd lxd:lxd
 sudo lxd-demo-server.configure
 ```
 
-You can then access the server at: http://IP-ADDRESS:8080/
+You can then access the server at: http://IP-ADDRESS:8081/
 
 ## Dependencies
 the demo.yaml files contains the configuration of LXD, using that the 
@@ -67,8 +67,8 @@ The daemon isn't verbose at all, in fact it will only log critical LXD errors.
 
 You can test things with:
 
-    curl http://localhost:8080/1.0
-    curl http://localhost:8080/1.0/terms
+    curl http://localhost:8081/1.0
+    curl http://localhost:8081/1.0/terms
     
 ## Get the history of commands
 
