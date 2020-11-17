@@ -34,7 +34,7 @@ sudo lxd-demo-server.configure
 You can then access the server at: http://IP-ADDRESS:8081/
 
 ## Dependencies
-the demo.yaml files contains the configuration of LXD, using that the 
+The lxd-demo.yaml files contains the configuration of LXD, using that the 
 limitations for RAM, CPU and Storage disk were set.
 
 The server needs to be able to talk to a LXD daemon over the local unix
