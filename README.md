@@ -1,11 +1,7 @@
 # SSD_Project_27
 
 ## To create a LXC container with limitations on RAM, CPU and Storage. The instances in a given VM are deployed with virtualization in place. No option for LXC - LXC communication, image is deployed. 
-Installation of lxc and lxd
-Initialize the LXC environment
-Creating container as unprivileged user/root using template
-Limiting the RAM/CPU/Storage of our container
-Get the history of commands
+
 ## LXD demo server
 
 ## Introduction
@@ -73,5 +69,7 @@ You can test things with:
 
     curl http://localhost:8080/1.0
     curl http://localhost:8080/1.0/terms
+    
+## Get the history of commands
 
 
