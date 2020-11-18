@@ -1,10 +1,10 @@
-# SSD27_Project
+# LXD demo server
 
-## To create a LXC container with limitations on RAM, CPU and Storage. The instances in a given VM are deployed with virtualization in place. No option for LXC - LXC communication, image is deployed. 
+This repository contains the backend code of the LXD online demo service.
 
-## LXD demo server
+[https://linuxcontainers.org/lxd/try-it](https://linuxcontainers.org/lxd/try-it)
 
-## Introduction
+## What is it
 
 Simply put, it's a small Go daemon exposing a REST API that users
 (mostly our javascript client) can interact with to create temporary
@@ -12,6 +12,9 @@ test containers and attach to that container's console.
 
 Those containers come with a bunch of resource limitations and an
 expiry, when the container expires, it's automatically deleted.
+
+The main client can be found at the URL above, with its source available here:  
+[https://github.com/lxc/linuxcontainers.org](https://github.com/lxc/linuxcontainers.org)
 
 ## Installing on Ubuntu
 The easiest way to get the demo server running on Ubuntu is by using the snap package.
@@ -31,11 +34,9 @@ sudo snap connect lxd-demo-server:lxd lxd:lxd
 sudo lxd-demo-server.configure
 ```
 
-You can then access the server at: http://IP-ADDRESS:8081/
+You can then access the server at: http://IP-ADDRESS:8080/
 
 ## Dependencies
-The lxd-demo.yaml files contains the configuration of LXD, using that the 
-limitations for RAM, CPU and Storage disk were set.
 
 The server needs to be able to talk to a LXD daemon over the local unix
 socket, so you need to have a LXD daemon installed and functional before
@@ -43,7 +44,7 @@ using this server.
 
 Other than that, you can pull all the other necessary dependencies with:
 
-    go get github.com/LakshmiPratti/SSD27_Project/
+    go get github.com/lxc/lxd-demo-server
 
 ## Building it
 
@@ -54,6 +55,10 @@ A very simple:
 Should do the trick.
 
 ## Running it
+
+To run your own, you should start by copying the example configuration
+file "lxd-demo.yaml.example" to "lxd-demo.yaml", then update its content
+according to your environment.
 
 You will either need a container to copy for every request or a
 container image to use, set that up and set the appropriate
@@ -67,11 +72,27 @@ The daemon isn't verbose at all, in fact it will only log critical LXD errors.
 
 You can test things with:
 
-    curl http://localhost:8081/1.0
-    curl http://localhost:8081/1.0/terms
-    
-## Get the history of commands
+    curl http://localhost:8080/1.0
+    curl http://localhost:8080/1.0/terms
 
-Reading and storing the command in an array as string while printing them and sending the data to the html division.
-Creating a form and taking email as an input passing the input and array to email function.
-Sending a mail using SMTP server by creating a token for security purposes and allowing the user to send a mail of the command ran on the terminal before pressing the send button.
+The server monitors the current directory for changes to its configuration file.
+It will automatically reload the configuration after it's changed.
+
+## Bug reports
+
+Bug reports can be filed at https://github.com/lxc/lxd-demo-server/issues/new
+
+## Contributing
+
+Fixes and new features are greatly appreciated but please read our
+[contributing guidelines](CONTRIBUTING.md) first.
+
+Contributions to this project should be sent as pull requests on github.
+
+## Support and discussions
+
+We use the LXC mailing-lists for developer and user discussions, you can
+find and subscribe to those at: https://lists.linuxcontainers.org
+
+If you prefer live discussions, some of us also hang out in
+[#lxcontainers](http://webchat.freenode.net/?channels=#lxcontainers) on irc.freenode.net.
