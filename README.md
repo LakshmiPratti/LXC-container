@@ -74,4 +74,4 @@ You can test things with:
 
 Reading and storing the command in an array as string while printing them and sending the data to the html division.
 Creating a form and taking email as an input passing the input and array to email function.
-Sending a mail using SMTP server by creating a token anout the prvoius commands user ran on the terminal before pressing the send button.
+Sending a mail using SMTP server by creating a token for security purposes and allowing the user to send a mail of the command ran on the terminal before pressing the send button.
