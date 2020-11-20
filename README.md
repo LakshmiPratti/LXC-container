@@ -83,7 +83,7 @@ It will automatically reload the configuration after it's changed.
 
 ## History of the Commands
 
-Reading and storing the command entered by the user. Taking email as an input. Sending a mail using SMTP API for delivering email, for security encrypted the SMTP credentials, locked it to a single domain, and passed a secure token instead of the credentials.
+Reading and storing the commands entered by the user. Taking email as an input. Sending a mail using SMTP API, and for security, encrypted the SMTP credentials, locked it to a single domain, and passed a secure token instead of the credentials.
 
 
 
