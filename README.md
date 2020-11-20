@@ -1,5 +1,7 @@
 # SSD27_Project
 
+To create a LXC container with limitations on RAM, CPU and storage.The instances in a given VM are deployed with virtualization in place.Containers are independent of each other,image is deployed and mailed the history of the commands. 
+
 ## LXD demo server
 
 This repository contains the backend code of the LXD online demo service.
@@ -19,6 +21,7 @@ The main client can be found at the URL above, with its source available here:
 [https://github.com/lxc/linuxcontainers.org](https://github.com/lxc/linuxcontainers.org)
 
 ## Installing on Ubuntu
+
 The easiest way to get the demo server running on Ubuntu is by using the snap package.
 
 First install and configure LXD itself:
@@ -58,7 +61,7 @@ Should do the trick.
 
 ## Running it
 
-You can change the configuration by update the content of lxd-demo.yaml file according to your environment.
+You can change the configuration by updating the content of lxd-demo.yaml file according to your environment.
 
 You will either need a container to copy for every request or a
 container image to use, set that up and set the appropriate
@@ -79,4 +82,8 @@ The server monitors the current directory for changes to its configuration file.
 It will automatically reload the configuration after it's changed.
 
 ## History of the Commands
+
+Reading and storing the command entered by the user. Taking email as an input. Sending a mail using SMTP API for delivering email, for security encrypted the SMTP credentials, locked it to a single domain, and passed a secure token instead of the credentials.
+
+
 
